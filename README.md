@@ -14,13 +14,13 @@ With this projet, I want to become more familiar with [GIT](https://git-scm.com/
 
 - [x] Configure local git with name and email.
 - [x] Initialize a git repo localy.
-- [ ] Create a list of standard for my commits.
-  - [ ] How to properly write a commit.
-  - [ ] List of standard emojis to use. _Because commit without emojis are not fun!_
-- [ ] Initial Commit.
-- [ ] Check how to log my commits
-- [ ] Initialize a git repo on github.
-- [ ] Push commits to github.
+- [x] Create a list of standard for my commits.
+  - [x] How to properly write a commit.
+  - [x] List of standard emojis to use. _Because commit without emojis are not fun!_
+- [x] Initial Commit.
+- [x] Check how to log my commits
+- [x] Initialize a git repo on github.
+- [x] Push commits to github.
 - [ ] Learn to fork a repo.
 - [ ] Clone a github repo.
 - [ ] Create a branch in a local repo _(git)_.
@@ -85,3 +85,5 @@ This is the place where I'll keep all the info I learned during this project. Th
 > Resolves: #123
 > See also: #456, #789\
 > ```
+>
+> For the emojis, I'll be using a Visual Studio Code Extensions named Emoji Commits. They have a standard list of Emojis to use with the proper title start.
