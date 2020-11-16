@@ -4,9 +4,9 @@ This list is inspired from Auth for Newbs, from the Coding Garden series.
 ## Authentication
 
 - [x] Create Server
-- [ ] Add auth router
-- [ ] Create user with POST /auth/signup
-  - [ ] validate required fields
+- [x] Add auth router
+- [x] Create user with POST /auth/signup
+  - [x] validate required fields
   - [ ] Check if username is unique
   - [ ] hash password with bcrypt
   - [ ] insert into db

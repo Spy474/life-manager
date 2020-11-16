@@ -1,15 +1,19 @@
+const bodyParser = require("body-parser");
 const express = require("express");
 const volleyball = require("volleyball");
 const auth = require("./auth/index.js");
 
 const app = express();
 app.use(volleyball);
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.json({
     message: "🦄🌈✨Hello World! 🌈✨🦄",
   });
 });
+
+app.use("/auth", auth);
 
 function notFound(req, res, next) {
   res.status(404);
