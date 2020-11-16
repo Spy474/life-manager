@@ -1,6 +1,9 @@
 #TODO LIST FOR AUTHENTIFICATION TO MY APP
 This list is inspired from Auth for Newbs, from the Coding Garden series.
 
+https://www.youtube.com/watch?v=JNAjjHwPFIw&list=PLM_i0obccy3tfAersmDaq7-WFqvooNOXf
+@ 2:02:56
+
 ## Authentication
 
 - [x] Create Server
