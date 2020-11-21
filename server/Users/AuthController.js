@@ -19,7 +19,7 @@ exports.signup = async (req, res, next) => {
       username: req.body.username,
       password: req.body.password,
     });
-    res.json(req.body);
+    res.json(user);
   } catch (error) {
     next(error);
   }

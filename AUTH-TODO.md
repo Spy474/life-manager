@@ -2,7 +2,10 @@
 This list is inspired from Auth for Newbs, from the Coding Garden series.
 
 https://www.youtube.com/watch?v=JNAjjHwPFIw&list=PLM_i0obccy3tfAersmDaq7-WFqvooNOXf
-@ 2:02:56
+@ DONE
+
+https://www.youtube.com/watch?v=S2LeHnj5GbU&list=PLM_i0obccy3tfAersmDaq7-WFqvooNOXf&index=2
+@ 0:00:0
 
 ## Authentication
 
@@ -10,9 +13,9 @@ https://www.youtube.com/watch?v=JNAjjHwPFIw&list=PLM_i0obccy3tfAersmDaq7-WFqvooN
 - [x] Add auth router
 - [x] Create user with POST /auth/signup
   - [x] validate required fields
-  - [ ] Check if username is unique
-  - [ ] hash password with bcrypt
-  - [ ] insert into db
+  - [x] Check if username is unique
+  - [x] hash password with bcrypt
+  - [x] insert into db
 - [ ] Create Landing Page
   - [ ] Link to Sign Up Page
 - [ ] Create Sign Up Page
