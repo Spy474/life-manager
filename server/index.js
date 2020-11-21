@@ -1,7 +1,11 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const volleyball = require("volleyball");
-const auth = require("./auth/index.js");
+
+const connectDB = require("./db/connection.js");
+const auth = require("./Users/AuthRoutes.js");
+
+connectDB();
 
 const app = express();
 app.use(volleyball);
