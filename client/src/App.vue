@@ -11,7 +11,7 @@
         </router-link>
       </div>
     </nav>
-    <router-view class="container" />
+    <router-view class="container mt-6" />
   </div>
 </template>
 

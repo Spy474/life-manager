@@ -18,8 +18,8 @@ https://www.youtube.com/watch?v=S2LeHnj5GbU&list=PLM_i0obccy3tfAersmDaq7-WFqvooN
   - [x] insert into db
 - [x] Create Landing Page
   - [x] Link to Sign Up Page
-- [ ] Create Sign Up Page
-  - [ ] Form with: username and password
+- [x] Create Sign Up Page
+  - [x] Form with: username and password
   - [ ] When form is submitted
     - [ ] Validate username
       - [ ] Display errors
