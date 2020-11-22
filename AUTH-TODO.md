@@ -5,7 +5,7 @@ https://www.youtube.com/watch?v=JNAjjHwPFIw&list=PLM_i0obccy3tfAersmDaq7-WFqvooN
 @ DONE
 
 https://www.youtube.com/watch?v=S2LeHnj5GbU&list=PLM_i0obccy3tfAersmDaq7-WFqvooNOXf&index=2
-@ 0:00:0
+@ 0:27:52
 
 ## Authentication
 
@@ -16,8 +16,8 @@ https://www.youtube.com/watch?v=S2LeHnj5GbU&list=PLM_i0obccy3tfAersmDaq7-WFqvooN
   - [x] Check if username is unique
   - [x] hash password with bcrypt
   - [x] insert into db
-- [ ] Create Landing Page
-  - [ ] Link to Sign Up Page
+- [x] Create Landing Page
+  - [x] Link to Sign Up Page
 - [ ] Create Sign Up Page
   - [ ] Form with: username and password
   - [ ] When form is submitted
