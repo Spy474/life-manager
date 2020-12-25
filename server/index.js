@@ -1,27 +1,33 @@
-const bodyParser = require("body-parser");
-const express = require("express");
-const volleyball = require("volleyball");
+const bodyParser = require('body-parser');
+const express = require('express');
+const volleyball = require('volleyball');
+const cors = require('cors');
 
-const connectDB = require("./db/connection.js");
-const auth = require("./Users/AuthRoutes.js");
+const connectDB = require('./db/connection.js');
+const auth = require('./Users/AuthRoutes.js');
 
 connectDB();
 
 const app = express();
 app.use(volleyball);
+app.use(
+  cors({
+    origin: 'http://localhost:8080',
+  })
+);
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
   res.json({
-    message: "🦄🌈✨Hello World! 🌈✨🦄",
+    message: '🦄🌈✨Hello World! 🌈✨🦄',
   });
 });
 
-app.use("/auth", auth);
+app.use('/auth', auth);
 
 function notFound(req, res, next) {
   res.status(404);
-  const error = new Error("Not Found - " + req.originalUrl);
+  const error = new Error('Not Found - ' + req.originalUrl);
   next(error);
 }
 

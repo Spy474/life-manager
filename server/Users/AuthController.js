@@ -1,12 +1,12 @@
-const express = require("express");
-const User = require("./UserModel.js");
+const express = require('express');
+const User = require('./UserModel.js');
 
 // @desc      Main Route
 // @route     GET /auth
 // @access    Public
 exports.get = (req, res) => {
   res.json({
-    message: "🔒",
+    message: '🔒',
   });
 };
 
@@ -21,6 +21,7 @@ exports.signup = async (req, res, next) => {
     });
     res.json(user);
   } catch (error) {
+    res.status(422);
     next(error);
   }
 };

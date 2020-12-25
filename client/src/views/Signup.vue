@@ -1,5 +1,10 @@
 <template>
-  <div columns>
+  <div class="columns">
+    <div class="column">
+      <h1>Signup</h1>
+      <p v-if="signingUp">Loading...</p>
+    </div>
+
     <div
       v-if="errorMessage"
       class="notification is-danger column is-half is-offset-one-quarter"
@@ -8,7 +13,11 @@
       {{ errorMessage }}
     </div>
 
-    <form class="column is-half is-offset-one-quarter" @submit.prevent="signup">
+    <form
+      v-if="!signingUp"
+      class="column is-half is-offset-one-quarter"
+      @submit.prevent="signup"
+    >
       <div class="field">
         <p class="control has-icons-left has-icons-right">
           <input
@@ -75,6 +84,8 @@
 <script>
 import Joi from 'joi';
 
+const SIGNUP_URL = 'http://localhost:5000/auth/signup';
+
 const schema = Joi.object().keys({
   username: Joi.string()
     .regex(/(^[a-zA-Z0-9_]+$)/)
@@ -88,6 +99,7 @@ const schema = Joi.object().keys({
 export default {
   name: 'Signup',
   data: () => ({
+    signingUp: false,
     errorMessage: '',
     user: {
       username: '',
@@ -107,7 +119,34 @@ export default {
     signup() {
       this.errorMessage = '';
       if (this.validUser()) {
-        console.log("User is valid. Let's send it to the server");
+        const body = {
+          username: this.user.username,
+          password: this.user.password,
+        };
+        this.signingUp = true;
+        fetch(SIGNUP_URL, {
+          method: 'post',
+          body: JSON.stringify(body),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              return response.json();
+            }
+            return response.json().then((error) => {
+              throw new Error(error.message);
+            });
+          })
+          .then(() => {
+            this.signingUp = false;
+            this.$router.push('/login');
+          })
+          .catch((error) => {
+            this.signingUp = false;
+            this.errorMessage = error.message;
+          });
       }
     },
     validUser() {
