@@ -2,6 +2,7 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const volleyball = require('volleyball');
 const cors = require('cors');
+require('dotenv').config();
 
 const connectDB = require('./db/connection.js');
 const auth = require('./Users/AuthRoutes.js');
